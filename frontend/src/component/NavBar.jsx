@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./NavBar.css";
 import { Navbar, Nav } from "react-bootstrap";
-import Logo from "../img/logo.png";
+import Logo from "../img/Workkar-logo.jpeg";
 import Switch from "react-switch";
 
 class NavBar extends Component {
@@ -20,6 +20,8 @@ class NavBar extends Component {
         {/* <div className="container"> */}
           <Navbar.Brand id="logo-anchor">
             <img id ="nav-bar-logo"src={Logo} alt="" />
+            
+            {/* <p>Workkar</p> */}
             
             <span id="toggle-switch"><Switch 
     checked={this.props.checked}

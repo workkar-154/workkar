@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Login.css";
-import Logo from "../img/logo.png";
+import Logo from "../img/Workkar-logo.jpeg";
 import { css } from "@emotion/core";
 // First way to import
 import { ScaleLoader } from "react-spinners";

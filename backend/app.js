@@ -365,7 +365,7 @@ const LeaveApplicationHRValidation = Joi.object().keys({
 //////////////////////////////////
 //////////////////Role
 var roleSchema = new mongoose.Schema({
-  // RoleID: {type:Number,required:true, default: 0 },
+  RoleID: {type:Number,required:true, default: 0 },
   RoleName: { type: String, required: true },
   company: [{ type: mongoose.Schema.Types.ObjectId, ref: "Company" }]
 });
@@ -1580,7 +1580,7 @@ app.get("/api/employee", verifyHR, (req, res) => {
     });
 });
 
-app.post("/api/employee", verifyHR, (req, res) => {
+app.post("/api/employee", (req, res) => {
   Joi.validate(req.body, EmployeeValidation, (err, result) => {
     if (err) {
       console.log(err);
